@@ -13,28 +13,25 @@ This Source is not to harm ,but make the world a better place.
 ![image](https://user-images.githubusercontent.com/37055923/109450531-1915d680-7a86-11eb-8ef7-ec5c0a500789.png)
 
 
-# musicCloud获取用户评论
+# musicCloud获取用户评论  
 
-#####原理：获取指定用户新建、收藏的所有歌单，获取其中所有歌曲，查询每首歌曲下的评论是否有目标用户的评论
+原理：获取指定用户新建、收藏的所有歌单，获取其中所有歌曲，查询每首歌曲下的评论是否有目标用户的评论
 	
 
-# 执行顺序
-#####1、下载chromeDriver.exe
-	    https://sites.google.com/a/chromium.org/chromedriver/downloads
-	    需要与自己Chrome浏览器版本匹配
-#####2、将chromedriver.exe放到python安装目录下
-#####3、执行sql init 初始化数据库
-#####4、PC端打开目标网易云主页如:
-        https://music.163.com/#/user/home?id=123123123
-        123123123就是目标的id
-#####5、执行playlist_by_user.py 输入用户ID查找用户创建的、收藏的歌单
+# 执行顺序  
+> 1、下载chromeDriver.exe  
+> https://sites.google.com/a/chromium.org/chromedriver/downloads  需要与自己Chrome浏览器版本匹配  
+> 2、将chromedriver.exe放到python安装目录下  
+> 3、执行sql init 初始化数据库  
+> 4、PC端打开目标网易云主页如:  https://music.163.com/#/user/home?id=123123123  123123123就是目标的id  
+> 5、执行playlist_by_user.py 输入用户ID查找用户创建的、收藏的歌单  
     
-#####6、执行musics_by_playlist.py 获取上一步获取到的歌单下的所有歌曲
+> 6、执行musics_by_playlist.py 获取上一步获取到的歌单下的所有歌曲  
     
-#####7、执行comment_by_music.py 获取上一步获取到的歌曲下的所有评论，命中则存库
+> 7、执行comment_by_music.py 获取上一步获取到的歌曲下的所有评论，命中则存库  
     
     
-# sql init:
+# sql init:  
 
 
 SET NAMES utf8mb4;
